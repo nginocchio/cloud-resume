@@ -1,0 +1,74 @@
+.navbar {
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar__logo {
+  text-decoration: inherit;
+  color: inherit;
+  font-size: 1.25em;
+}
+
+.navbar__logo:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+
+.dropdown__drawer {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-inline-size: 100%;
+  background-color: #eee;
+}
+
+.dropdown.is-open .dropdown__drawer {
+  display: block;
+}
+
+.navbar__links {
+  display: none;
+}
+
+.navbar__links > li + li {
+  margin-left: 1rem;
+}
+
+.menu {
+  margin-block: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+  border: 1px solid var(--color-border)
+}
+
+.menu > li > a {
+  display: block;
+  padding: .5em 1.5em;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+  text-align: end;
+}
+
+@media (min-width: 768px) {
+
+  .dropdown {
+    display: none;
+  }
+
+  .navbar__links {
+    display: flex;
+  }
+}
+
+.projects-page .navbar__links a[aria-current="page"] {
+  text-decoration: underline;
+}

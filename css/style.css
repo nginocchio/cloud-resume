@@ -1,0 +1,15 @@
+@layer reset, global, modules, pages, utilities;
+
+@import url("./reset.css") layer(reset);
+@import url("./global.css") layer(global);
+
+@import url("./modules/hero.css") layer(modules);
+@import url("./modules/navbar.css") layer(modules);
+@import url("./modules/layout.css") layer(modules);
+@import url("./modules/card.css") layer(modules);
+@import url("./pages/home.css") layer(pages);
+@import url("./pages/about.css") layer(pages);
+@import url("./pages/projects.css") layer(pages);
+@import url("./modules/footer.css") layer(modules);
+
+@import url("./utilities.css") layer(utilities);

@@ -1,0 +1,376 @@
+.projects-hero > .container {
+  row-gap: 1rem;
+  padding-block: 0.75rem 2.5rem;
+}
+
+.projects-heading {
+  max-width: 40rem;
+  padding-inline: 0.5rem;
+}
+
+.projects-eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c9d3dc;
+}
+
+.projects-heading h1 {
+  margin: 0.35rem 0 0.75rem;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.projects-heading p {
+  margin: 0;
+  color: #d7dee5;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.projects-main {
+  padding: 1.5rem 1rem 3rem;
+}
+
+.project-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-filter {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.875rem;
+}
+
+.project-filter.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.project-count {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.project-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.project-card__logo {
+  height: 2.5rem;
+  width: auto;
+  max-width: 4.5rem;
+  object-fit: contain;
+}
+
+.project-card__logo_aws {
+  height: 2rem;
+}
+
+.project-card__external svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: var(--color-text-muted);
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.project-mark {
+  display: grid;
+  place-items: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.project-mark_kubernetes {
+  color: #326ce5;
+  background: #e8f0ff;
+  border-radius: 999px;
+}
+
+.project-mark_grafana {
+  color: #fff;
+  background: #f46800;
+  border-radius: 999px;
+  width: 2.5rem;
+}
+
+.project-mark_gears {
+  color: #4b5563;
+  background: #eef2f6;
+  border-radius: 999px;
+  font-size: 1.2rem;
+}
+
+.project-mark_document svg {
+  width: 2rem;
+  height: 2.4rem;
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 2;
+}
+
+.project-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  margin: 0 0 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  background: var(--color-surface-muted);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.85rem;
+  background: var(--color-surface);
+}
+
+.featured-project__content .projects-eyebrow {
+  color: var(--color-text-muted);
+}
+
+.featured-project h2 {
+  margin: 0.4rem 0 0.75rem;
+  font-size: 1.6rem;
+}
+
+.featured-project__content > p {
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.featured-project__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.project-button_primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.project-button_secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.project-button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.featured-project__visuals {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 0.75rem;
+}
+
+.project-preview {
+  min-height: 13rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(16, 24, 32, 0.88), rgba(16, 24, 32, 0.45)), url("/img/mountain-range.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #e8eef3;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-preview__navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  opacity: 0.85;
+}
+
+.project-preview__hero {
+  margin: auto 0 0.4rem;
+}
+
+.project-preview__hero h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.project-preview__hero p {
+  margin: 0 0 0.7rem;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  max-width: 16rem;
+}
+
+.project-preview__hero span {
+  display: inline-block;
+  background: #fff;
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.6rem;
+}
+
+.architecture-panels {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.architecture-card {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: 0.6rem;
+  padding: 0.75rem;
+}
+
+.architecture-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.architecture-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--color-text-secondary);
+}
+
+.architecture-icon,
+.architecture-symbol {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto 0.25rem;
+  border-radius: 0.4rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.architecture-icon_web {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.architecture-icon_functions {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.architecture-icon_db {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.architecture-symbol {
+  background: #eef2f7;
+  color: #111827;
+}
+
+@media (max-width: 1000px) {
+
+  .projects-grid,
+  .featured-project,
+  .featured-project__visuals {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .projects-heading h1 {
+    font-size: 2.2rem;
+  }
+
+}

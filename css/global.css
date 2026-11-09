@@ -1,0 +1,88 @@
+:root {
+  --font-heading: "Manrope", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+
+  --color-primary: #14212C;
+  --color-primary-hover: #22313D;
+
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F5F6F7;
+
+  --color-text: #111820;
+  --color-text-secondary: #596575;
+  --color-text-muted: #7C8794;
+
+  --color-border: #E2E5E9;
+
+  --color-dark: #101820;
+  --color-dark-surface: #18232D;
+
+  --color-terminal-ps1: #FFEA7F;
+  --color-terminal-command: #909D4E;
+
+  --border-rounded: 0.3rem;
+
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  /*font-size: 1em;*/
+  /*line-height: 1.4;*/
+}
+
+/*
+* A better looking default horizontal rule
+*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+* Allow only vertical resizing of textareas.
+*/
+textarea {
+  resize: vertical;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 0.3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

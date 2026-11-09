@@ -1,0 +1,19 @@
+.hero {
+  background-image: linear-gradient(
+    90deg,
+    rgba(16, 24, 32, 0.96) 0%,
+    rgba(16, 24, 32, 0.72) 45%,
+    rgba(16, 24, 32, 0.30) 100%
+  ),
+  url("/img/mountain-range.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-border);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 3rem;
+  padding-block: 1rem 3rem;
+}
