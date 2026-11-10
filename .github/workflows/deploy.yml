@@ -1,0 +1,28 @@
+name: 'Terraform Unit Tests'
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform-unit-tests:
+    name: 'Terraform Unit Tests'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+
+    - name: Setup OpenTofu
+      uses: opentofu/setup-opentofu@v2
+
+    - name: Tofu Init
+      run: tofu init -backend=false
+
+    - name: Tofu Validate
+      run: tofu validate
+
+    - name: Tofu Format
+      run: tofu fmt -check -recursive
