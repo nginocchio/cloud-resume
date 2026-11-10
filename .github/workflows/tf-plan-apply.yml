@@ -19,6 +19,10 @@ env:
   ARM_TENANT_ID: "${{ secrets.AZURE_TENANT_ID }}"
   ARM_USE_MSI: true
 
+defaults:
+  run:
+    working-directory: ./infra
+
 jobs:
   terraform-plan:
     name: 'Tofu Plan'
@@ -33,6 +37,9 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v7
+      with:
+        sparse-checkout: |
+          infra
 
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@v2
@@ -122,6 +129,9 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v7
+      with:
+        sparse-checkout: |
+          infra
       
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@v2
