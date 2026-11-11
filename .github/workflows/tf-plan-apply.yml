@@ -146,6 +146,7 @@ jobs:
       uses: actions/download-artifact@v8
       with:
         name: tfplan
+        path: infra
 
     # Tofu Apply
     - name: Tofu Apply
