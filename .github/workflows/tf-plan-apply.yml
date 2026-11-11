@@ -42,6 +42,8 @@ jobs:
 
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@v2
+      with:
+        tofu_wrapper: false
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Tofu Init
@@ -132,6 +134,8 @@ jobs:
       
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@v2
+      with:
+        tofu_wrapper: false
 
     # Initialize a new or existing Tofu working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Tofu Init
