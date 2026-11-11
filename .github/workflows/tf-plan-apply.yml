@@ -60,7 +60,7 @@ jobs:
       id: tf-plan
       run: |
         exitcode=0
-        tofu plan -detailed-exitcode -no-color -out tfplan || export exitcode=$?
+        tofu plan -detailed-exitcode -no-color -out tfplan || exitcode=$?
 
         echo "exitcode=$exitcode" >> "$GITHUB_OUTPUT"
         
