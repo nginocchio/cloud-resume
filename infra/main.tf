@@ -57,7 +57,7 @@ resource "azurerm_resource_deployment_script_azure_cli" "portfolio" {
   name                = "dply-script-prod-01"
   resource_group_name = azurerm_resource_group.portfolio.name
   location            = azurerm_resource_group.portfolio.location
-  version             = "2.92.0"
+  version             = "2.85.0"
   retention_interval  = "P1D"
 
   environment_variable {
