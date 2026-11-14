@@ -53,6 +53,12 @@ resource "azurerm_cosmosdb_table" "portfolio" {
   account_name        = azurerm_cosmosdb_account.portfolio.name
 }
 
+resource "azurerm_user_assigned_identity" "portfolio" {
+  name                = ""
+  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = azurerm_resource_group.portfolio.location
+}
+
 resource "azurerm_resource_deployment_script_azure_cli" "portfolio" {
   name                = "dply-script-prod-01"
   resource_group_name = azurerm_resource_group.portfolio.name
@@ -72,4 +78,11 @@ resource "azurerm_resource_deployment_script_azure_cli" "portfolio" {
   depends_on = [
     azurerm_cosmosdb_table.portfolio
   ]
+
+  identity {
+    type = "UserAssigned"
+    identity_ids = [
+      azurerm_user_assigned_identity.portfolio.id
+    ]
+  }
 }
