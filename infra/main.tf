@@ -54,7 +54,7 @@ resource "azurerm_cosmosdb_table" "portfolio" {
 }
 
 resource "azurerm_user_assigned_identity" "portfolio" {
-  name                = ""
+  name                = "id-portfolio-prod-01"
   resource_group_name = azurerm_resource_group.portfolio.name
   location            = azurerm_resource_group.portfolio.location
 }
